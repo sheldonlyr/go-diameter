@@ -163,12 +163,12 @@ func (m *Message) decodeAVPs(b []byte) error {
 
 // NewMessage creates and initializes a Message.
 func NewMessage(cmd uint32, flags uint8, appid, hopbyhop, endtoend uint32, dictionary *dict.Parser) *Message {
-	if hopbyhop == 0 {
-		hopbyhop = rand.Uint32()
-	}
-	if endtoend == 0 {
-		endtoend = rand.Uint32()
-	}
+	// if hopbyhop == 0 {
+	// 	hopbyhop = rand.Uint32()
+	// }
+	// if endtoend == 0 {
+	// 	endtoend = rand.Uint32()
+	// }
 	return &Message{
 		Header: &Header{
 			Version:       1,
